@@ -17,12 +17,20 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap',
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Jost&family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap',
       },
       {
         rel: 'stylesheet',
@@ -50,7 +58,7 @@ export default {
   plugins: [
     { src: '~/plugins/animateOnScroll.client.js', ssr: false},
     { src: '~/plugins/vueHorizontal.js', ssr: false },
-    { src: '~/plugins/vue-stripe.js', ssr: false, mode: 'client' },
+    // { src: '~/plugins/vue-stripe.js', ssr: false, mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

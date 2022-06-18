@@ -3,18 +3,27 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 
-$green-primary: #00ffe9;
-$green-hover: #00a89a;
-$purple-secondary: #766eff;
-$blue-hover: #2417ff;
+// $blue-sec-light: #00ffe9;
+// $blue-sec-mid: #00a89a;
+// $purple-primary: #766eff;
+// $blue-sec-light: #2417ff;
+
+// New Design Colors
+$purple-primary: #9B35DE;
+$blue-sec-light: #61DDEA;
+$blue-sec-mid: #00A5FF;
+
 
 // Fonts
 
 $general-font: 'Open Sans', sans-serif;
-$title-font: 'Poiret One', cursive;
+$title-font: 'Poppins', sans-serif;
 $special-font: 'Jost', sans-serif;
 
-$carousel-controls-bg: rgba(0, 0, 0, 0.02);
+// Fonts fallback
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 @import 'mixins';
 @import 'generalStyles';

@@ -16,7 +16,7 @@
                 </v-btn>
               </v-card>
             </v-col>
-            <!-- <v-col cols="12" md="6">
+            <v-col cols="12" md="6">
               <v-card width="100%" height="300" class="pa-5 d-flex justify-center align-center">
                 <stripe-element-card ref="cardRef" :pk="pk" hide-postal-code @token="tokenCreated"
                   @loading=" v=> loading = v" />
@@ -27,7 +27,7 @@
                 </v-card-actions>
               </v-card>
 
-            </v-col> -->
+            </v-col>
           </v-row>
         </v-container>
       </section>
@@ -36,11 +36,12 @@
 </template>
 
 <script>
-import { StripeCheckout } from '@vue-stripe/vue-stripe';
+import { StripeCheckout, StripeElementCard } from '@vue-stripe/vue-stripe';
 // import myBtn from '~/components/buttons/myBtn.vue'
 export default {
   components: {
     StripeCheckout,
+    StripeElementCard
     // myBtn
   },
   data() {
@@ -92,6 +93,6 @@ export default {
 <style lang="scss" scoped>
 section {
   min-height: 100vh;
-  background-color: rgba($color: $purple-secondary, $alpha: .6);
+  background-color: rgba($color: $purple-primary, $alpha: .6);
 }
 </style>

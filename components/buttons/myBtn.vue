@@ -76,16 +76,16 @@ export default {
   }
 }
 .bg-primary {
-  background-color: $green-primary !important;
+  background-color: $blue-sec-light !important;
   &:hover {
-    background-color: $green-hover !important;
+    background-color: $blue-sec-mid !important;
   }
 }
 .bg-secondary {
-  background-color: $purple-secondary !important;
+  background-color: $purple-primary !important;
   color: #fff !important;
   &:hover {
-    background-color: $blue-hover !important;
+    background-color: $blue-sec-light !important;
   }
 }
 </style>

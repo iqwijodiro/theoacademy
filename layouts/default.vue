@@ -1,7 +1,7 @@
 <template>
   <v-app class="app">
     <nav-bar />
-    <v-main class="ma-0 px-0">
+    <v-main class="ma-0 px-0 pt-0">
       <Nuxt />
     </v-main>
     <my-footer />

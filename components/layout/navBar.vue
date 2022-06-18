@@ -1,24 +1,42 @@
 <template>
   <v-card id="navbar" flat tile>
     <v-app-bar
-app height="95" min-height="75" width="100%" scroll-threshold="500" tag="header" color="#000"
-      class="px-0">
-      <v-container class="d-flex justify-center align-center align-self-baseline py-0 px-lg-14">
+      app
+      tag="header"
+      height="95"
+      color="#9B35DE"
+      class="px-5"
+      elevation="0"
+    >
+      <v-container class="d-flex justify-space-between align-center pa-5">
         <v-app-bar-title class="mr-5">
           <nuxt-link to="/">
-            <img
-:src="require('~/assets/images/logo-brand.png')" width="100%" height="95" contain
-              class="d-block mt-n1" />
+            <!-- <img
+              :src="require('~/assets/images/logo-brand.png')"
+              width="100%"
+              height="95"
+              contain
+              class="d-block mt-n1"
+            /> -->
+            <div class="font-weight-bold font-blue">Theo Academy</div>
           </nuxt-link>
         </v-app-bar-title>
         <!-- <v-spacer></v-spacer> -->
-        <nav v-if="$vuetify.breakpoint.mdAndUp" class="nav transparent d-flex align-center mx-5">
+        <nav
+          v-if="$vuetify.breakpoint.mdAndUp"
+          class="nav transparent d-flex justify-space-around align-center mx-5"
+        >
           <!-- <v-row align="end" class="pt-0"> -->
           <!-- <v-col> -->
-          <nuxt-link v-for="link in links" :key="link.title" :to="link.url" class="nav__link ma-4">
+          <nuxt-link
+            v-for="link in links"
+            :key="link.title"
+            :to="link.url"
+            class="nav__link ma-4"
+          >
             <h3>{{ link.title }}</h3>
           </nuxt-link>
-          <nuxt-link to="/trainingCenter" class="nav__link ma-4">
+          <!-- <nuxt-link to="/trainingCenter" class="nav__link ma-4">
             <v-menu dark open-on-hover bottom offset-y>
               <template #activator="{ on, attrs }">
                 <h3 v-bind="attrs" v-on="on">
@@ -29,7 +47,10 @@ app height="95" min-height="75" width="100%" scroll-threshold="500" tag="header"
               <v-list class="nav">
                 <v-list-item v-for="(droplink, i) in dropdown" :key="i">
                   <v-list-item-title>
-                    <nuxt-link :to="droplink.url" class="nav__link nav__link-drop">
+                    <nuxt-link
+                      :to="droplink.url"
+                      class="nav__link nav__link-drop"
+                    >
                       <h3>
                         {{ droplink.title }}
                       </h3>
@@ -38,28 +59,49 @@ app height="95" min-height="75" width="100%" scroll-threshold="500" tag="header"
                 </v-list-item>
               </v-list>
             </v-menu>
-          </nuxt-link>
-          <nuxt-link to="/ourBlog" class="nav__link ma-4">
+          </nuxt-link> -->
+          <!-- <nuxt-link to="/ourBlog" class="nav__link ma-4">
             <h3>Blog</h3>
           </nuxt-link>
           <nuxt-link to="/contactUs" class="nav__link ma-4">
             <h3>Contáctanos</h3>
-          </nuxt-link>
+          </nuxt-link> -->
           <div class="d-flex justify-center align-center mx-5">
-            <my-btn text="Ingresar" destiny="/paymentPage" color="primary" append-icon="mdi-login-variant" />
+            <my-btn
+              text="Ingresar"
+              destiny="/paymentPage"
+              color="primary"
+              append-icon="mdi-login-variant"
+            />
           </div>
           <!-- </v-col> -->
           <!-- </v-row> -->
         </nav>
         <v-btn
-v-if="$vuetify.breakpoint.smAndDown" class="align-self-center animated-icon ani" icon color="#fff"
-          @click.stop="drawer = !drawer">
+          v-if="$vuetify.breakpoint.smAndDown"
+          class="align-self-center animated-icon ani"
+          icon
+          color="#fff"
+          @click.stop="drawer = !drawer"
+        >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
       </v-container>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" class="drawer" :left="right" dark temporary fixed>
-      <v-img :src="require('~/assets/images/logo-brand.png')" width="80%" max-height="95" contain />
+    <v-navigation-drawer
+      v-model="drawer"
+      class="drawer"
+      :left="right"
+      light
+      temporary
+      fixed
+    >
+      <v-img
+        :src="require('~/assets/images/logo-brand.png')"
+        width="80%"
+        max-height="95"
+        contain
+      />
       <v-list nav dense>
         <v-list-item-group class="d-flex flex-column pa-1 mx-1">
           <v-list-item v-for="(link, i) in links" :key="i" class="pa-2">
@@ -101,6 +143,26 @@ export default {
           url: '/aboutUs',
           icon: 'mdi-account-group',
         },
+        {
+          title: 'Formación',
+          url: '/trainingCenter',
+          icon: 'mdi-school',
+        },
+        {
+          title: 'Blog',
+          url: '/ourBlog',
+          icon: 'mdi-wrench',
+        },
+        {
+          title: 'Recursos',
+          url: '/ourResources',
+          icon: 'mdi-wrench',
+        },
+        {
+          title: 'Contactos',
+          url: '/contactUs',
+          icon: 'mdi-account-group',
+        },
       ],
       dropdown: [
         {
@@ -130,11 +192,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// #navbar {
-//   .v-toolbar__content {
-//     // height: 95px !important;
-//   }
-// }
 .nav {
   .nav__link,
   .nav__link.nav__link-drop {

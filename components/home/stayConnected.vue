@@ -115,7 +115,7 @@ export default {
 
 <style lang="scss" scoped>
 .sharing {
-  background-color: $green-primary;
+  background-color: $blue-sec-light;
   .video__description {
     color: #383838;
   }
