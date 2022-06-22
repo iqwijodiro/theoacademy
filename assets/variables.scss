@@ -9,20 +9,19 @@
 // $blue-sec-light: #2417ff;
 
 // New Design Colors
-$purple-primary: #9B35DE;
-$blue-sec-light: #61DDEA;
-$blue-sec-mid: #00A5FF;
-
+$purple-primary: #9b35de;
+$blue-sec-light: #61ddea;
+$blue-sec-mid: #00a5ff;
 
 // Fonts
 
-$general-font: 'Open Sans', sans-serif;
+$general-font: 'Poppins', sans-serif;
 $title-font: 'Poppins', sans-serif;
 $special-font: 'Jost', sans-serif;
 
 // Fonts fallback
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 @import 'mixins';

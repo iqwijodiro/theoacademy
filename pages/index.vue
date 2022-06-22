@@ -1,6 +1,7 @@
 <template>
   <div class="index">
     <hero-index />
+    <intro-section />
     <versicle-sect />
     <top-courses />
     <stay-Connected />
@@ -18,6 +19,7 @@ import StayConnected from '~/components/home/stayConnected.vue'
 import NewBorn from '~/components/home/newBorn.vue'
 import TestimonialSect from '~/components/home/testimonialSect.vue'
 import ClientSect from '~/components/home/clientSect.vue'
+import IntroSection from '~/components/home/introSection.vue'
 export default {
   name: 'HomePage',
   components: {
@@ -28,7 +30,8 @@ export default {
     NewBorn,
     TestimonialSect,
     ClientSect,
-  },
+    IntroSection
+},
   head() {
     return {
       title: 'Formación teológica online - Theo Academy',

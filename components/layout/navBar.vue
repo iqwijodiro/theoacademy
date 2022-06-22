@@ -1,33 +1,24 @@
 <template>
-  <v-card id="navbar" flat tile>
+  <v-card id="navbar" flat tile class="pa-0">
     <v-app-bar
       app
       tag="header"
       height="95"
       color="#9B35DE"
-      class="px-5"
-      elevation="0"
+      elevate-on-scroll
+      class="pa-0"
     >
       <v-container class="d-flex justify-space-between align-center pa-5">
         <v-app-bar-title class="mr-5">
           <nuxt-link to="/">
-            <!-- <img
-              :src="require('~/assets/images/logo-brand.png')"
-              width="100%"
-              height="95"
-              contain
-              class="d-block mt-n1"
-            /> -->
             <div class="font-weight-bold font-blue">Theo Academy</div>
           </nuxt-link>
         </v-app-bar-title>
-        <!-- <v-spacer></v-spacer> -->
+        <v-spacer></v-spacer>
         <nav
           v-if="$vuetify.breakpoint.mdAndUp"
           class="nav transparent d-flex justify-space-around align-center mx-5"
         >
-          <!-- <v-row align="end" class="pt-0"> -->
-          <!-- <v-col> -->
           <nuxt-link
             v-for="link in links"
             :key="link.title"
@@ -36,47 +27,60 @@
           >
             <h3>{{ link.title }}</h3>
           </nuxt-link>
-          <!-- <nuxt-link to="/trainingCenter" class="nav__link ma-4">
-            <v-menu dark open-on-hover bottom offset-y>
-              <template #activator="{ on, attrs }">
-                <h3 v-bind="attrs" v-on="on">
-                  Formación
-                  <v-icon color="#fff"> mdi-menu-down </v-icon>
-                </h3>
-              </template>
-              <v-list class="nav">
-                <v-list-item v-for="(droplink, i) in dropdown" :key="i">
-                  <v-list-item-title>
-                    <nuxt-link
-                      :to="droplink.url"
-                      class="nav__link nav__link-drop"
-                    >
-                      <h3>
-                        {{ droplink.title }}
-                      </h3>
-                    </nuxt-link>
-                  </v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </nuxt-link> -->
-          <!-- <nuxt-link to="/ourBlog" class="nav__link ma-4">
-            <h3>Blog</h3>
-          </nuxt-link>
-          <nuxt-link to="/contactUs" class="nav__link ma-4">
-            <h3>Contáctanos</h3>
-          </nuxt-link> -->
-          <div class="d-flex justify-center align-center mx-5">
-            <my-btn
-              text="Ingresar"
-              destiny="/paymentPage"
-              color="primary"
-              append-icon="mdi-login-variant"
-            />
+          <div v-if="!logged" class="d-flex align-center">
+            <v-btn x-small rounded class="white--text bg-green py-6 px-5 mr-3">
+              Crear <br />
+              Cuenta
+              <v-icon>mdi-circle-edit-outline</v-icon>
+            </v-btn>
+            <v-btn x-small rounded class="white--text bg-green py-6 px-5">
+              Ingresar
+              <v-icon>mdi-login-variant</v-icon>
+            </v-btn>
           </div>
-          <!-- </v-col> -->
-          <!-- </v-row> -->
+          <div v-else class="d-flex justify-center align-center">
+            <v-btn icon>
+              <v-badge overlap dot offset-y="2" color="red accent-2">
+                <v-icon color="#fff" size="30"> mdi-bell-outline </v-icon>
+              </v-badge>
+            </v-btn>
+            <v-menu bottom min-width="200px" rounded offset-y>
+              <template #activator="{ on }">
+                <div class="d-flex justify-center align-center">
+                  <v-btn icon x-large v-on="on">
+                    <v-badge overlap dot color="success">
+                      <v-avatar color="primary" size="45">
+                        <span class="white--text text-h6">
+                          {{ user.initials }}
+                        </span>
+                      </v-avatar>
+                    </v-badge>
+                  </v-btn>
+                </div>
+              </template>
+              <v-card>
+                <v-list-item-content class="justify-center">
+                  <div class="mx-auto text-center">
+                    <v-avatar color="brown">
+                      <span class="white--text text-h5">{{
+                        user.initials
+                      }}</span>
+                    </v-avatar>
+                    <h3>{{ user.fullName }}</h3>
+                    <p class="text-caption mt-1">
+                      {{ user.email }}
+                    </p>
+                    <v-divider class="my-3"></v-divider>
+                    <v-btn depressed rounded text> Edit Account </v-btn>
+                    <v-divider class="my-3"></v-divider>
+                    <v-btn depressed rounded text> Disconnect </v-btn>
+                  </div>
+                </v-list-item-content>
+              </v-card>
+            </v-menu>
+          </div>
         </nav>
+        <!-- Mobile version Menu -->
         <v-btn
           v-if="$vuetify.breakpoint.smAndDown"
           class="align-self-center animated-icon ani"
@@ -86,8 +90,11 @@
         >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
+        <!-- Mobile version Menu -->
+        <v-switch v-model="logged"></v-switch>
       </v-container>
     </v-app-bar>
+    <!-- Mobile version Navigation Drawer -->
     <v-navigation-drawer
       v-model="drawer"
       class="drawer"
@@ -115,13 +122,14 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+    <!-- Mobile version Navigation Drawer -->
   </v-card>
 </template>
 
 <script>
-import myBtn from '~/components/buttons/myBtn.vue'
+// import myBtn from '~/components/buttons/myBtn.vue'
 export default {
-  components: { myBtn },
+  // components: { myBtn },
   data() {
     return {
       // scrollInvoked: 0,
@@ -129,9 +137,20 @@ export default {
       // height: 95,
       // minHeight: 70,
       // scrollAm: 300,
+      logged: false,
       drawer: false,
       right: true,
       tabs: false,
+      user: {
+        id: '64as1d6a9sd1a3s1das58',
+        fullName: 'Winder Díaz',
+        email: 'windev@gmail.com',
+        initials: 'WD',
+      },
+      // userNameSplitted: this.user.fullName.split(' '),
+      // userNameInitials:
+      //   this.userNameSplitted.shift().charAt(0) +
+      //   this.userNameSplitted.pop().charAt(0),
       links: [
         {
           title: 'Home',
@@ -183,9 +202,9 @@ export default {
       ],
     }
   },
-  // methods: {
-  //   onScroll() {
-  //     this.scrollInvoked++
+  // computed: {
+  //   userInitials() {
+  //     return this.userNameInitials.toUpperCase
   //   },
   // },
 }

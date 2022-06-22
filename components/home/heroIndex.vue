@@ -1,32 +1,5 @@
 <template>
   <section class="hero d-flex justify-center align-start px-md-14">
-    <!-- <v-container class="pb-10 mb-10">
-      <v-row>
-        <v-col cols="12" md="5" class="content__wrapper">
-          <appear-frame
-            v-if="show"
-            :delay="100"
-            :duration="600"
-            :translate="['0', '35%']"
-          >
-            <v-card flat color="transparent">
-              <h1 class="hero__title mb-3">The God Academy</h1>
-              <p class="hero__subtitle mb-3">
-                Un lugar para conocer más a Dios
-              </p>
-              <v-card-actions class="mx-n2 px-0">
-                <my-btn
-                  text="Conocer más"
-                  destiny="/courses"
-                  color="primary"
-                  class="ma-2"
-                />
-              </v-card-actions>
-            </v-card>
-          </appear-frame>
-        </v-col>
-      </v-row>
-    </v-container> -->
     <div class="hero__bg"></div>
     <v-container style="position: absolute; z-index: 3" class="px-14 pt-14">
       <v-row justify="start" align="start" class="px-10">
@@ -41,16 +14,7 @@
               <h1 class="hero__title mb-8">
                 Texto que corresponda <span class="font-blue">propuesta</span>
               </h1>
-              <!-- <p class="hero__subtitle mb-3">
-                Un lugar para conocer más a Dios
-              </p> -->
               <v-card-actions class="mx-n2 px-0">
-                <!-- <my-btn
-                  text="Conocer más"
-                  destiny="/courses"
-                  color="primary"
-                  class="ma-2"
-                /> -->
                 <v-row justify="start" no-gutters>
                   <v-col
                     v-for="icon in icons"
@@ -62,7 +26,7 @@
                     <v-card
                       height="105"
                       width="90"
-                      class="hero__card-option px-3 py-6"
+                      class="hero__card-option px-2 py-6"
                       color="white"
                     >
                       <div
@@ -88,10 +52,18 @@
         </v-col>
       </v-row>
     </v-container>
-    <img
-      src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1655565735/theoacademy-assets/hero_img_model_qelum4.png"
-      class="hero_model"
-    />
+    <appear-frame
+      v-if="show"
+      :delay="100"
+      :duration="1000"
+      :translate="['100%', '0']"
+    >
+      <img
+        src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1655565735/theoacademy-assets/hero_img_model_qelum4.png"
+        class="hero_model mb-16"
+        alt="Usuario de Theo Academy"
+      />
+    </appear-frame>
   </section>
 </template>
 
@@ -131,15 +103,19 @@ export default {
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 900px;
+  margin-bottom: 150px;
+  overflow: hidden;
   .hero__bg {
     background-image: url(https://res.cloudinary.com/db0gjdwr0/image/upload/v1655564817/theoacademy-assets/hero_bg-shape_fysbal.svg);
     background-size: cover;
     transform: rotate(-2deg);
     position: absolute;
-    width: 105vw;
-    height: 110vh;
+    width: 110%;
+    min-width: 100vw;
+    height: 1050px;
     margin-top: -220px;
+    margin-right: -60px;
     z-index: 1;
   }
   .hero__title {
@@ -159,10 +135,10 @@ export default {
   }
   .hero_model {
     position: absolute;
-    width: 64%;
+    width: 65%;
     // height: auto;
     top: 0px;
-    left: 38%;
+    left: 35%;
     z-index: 2;
   }
 }

@@ -14,17 +14,17 @@
             <div class="video__wrapper">
               <video
                 v-animate-on-scroll
-                src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653942263/tga_assets/Video_Tutorial_Teo_Academy_-_CENTI_Sur_EEUU_ivrqvq.mp4"
+                src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653942263/theoacademy-assets/Video_Tutorial_Teo_Academy_-_CENTI_Sur_EEUU_ivrqvq.mp4"
                 controls
                 width="100%"
                 class="video__item embedded-video mt-14 mt-sm-0 rounded-lg mr-5"
               >
                 <source
-                  src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653942263/tga_assets/Video_Tutorial_Teo_Academy_-_CENTI_Sur_EEUU_ivrqvq.mp4"
+                  src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653942263/theoacademy-assets/Video_Tutorial_Teo_Academy_-_CENTI_Sur_EEUU_ivrqvq.mp4"
                   type="video/mp4"
                 />
                 <source
-                  src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653925919/tga_assets/Video-Tutorial-Teo-Academy-CENTI-Sur-EEUU_zvy1ag.ogg"
+                  src="https://res.cloudinary.com/db0gjdwr0/video/upload/v1653925919/theoacademy-assets/Video-Tutorial-Teo-Academy-CENTI-Sur-EEUU_zvy1ag.ogg"
                   type="video/ogg"
                 />
               </video>
