@@ -1,8 +1,11 @@
 <template>
-  <section class="hero d-flex justify-center align-start px-md-14">
+  <section class="hero d-flex justify-center align-start px-5 px-md-14">
     <div class="hero__bg"></div>
-    <v-container style="position: absolute; z-index: 3" class="px-14 pt-14">
-      <v-row justify="start" align="start" class="px-10">
+    <v-container
+      style="position: absolute; z-index: 3"
+      class="px-5 px-md-14 pt-14"
+    >
+      <v-row justify="start" align="start" class="px-5 px-sm-10">
         <v-col cols="12" md="6" class="pt-10">
           <appear-frame
             v-if="show"
@@ -21,13 +24,15 @@
                     :key="icon.title"
                     cols="12"
                     md="3"
-                    class=""
+                    class="my-3 my-sm-1 mx-2"
                   >
                     <v-card
+                      v-model="card"
                       height="105"
                       width="90"
                       class="hero__card-option px-2 py-6"
                       color="white"
+                      @click="test(card)"
                     >
                       <div
                         class="d-flex justify-center align-center flex-column"
@@ -78,6 +83,7 @@ export default {
   data() {
     return {
       show: false,
+      card: [],
       icons: [
         {
           title: 'School',
@@ -96,6 +102,11 @@ export default {
   },
   mounted() {
     this.show = true
+  },
+  methods: {
+    test(card) {
+      console.log('Seleccionaste una modalidad' + card)
+    },
   },
 }
 </script>
@@ -141,5 +152,26 @@ export default {
     left: 35%;
     z-index: 2;
   }
+  @include respond(tab-land) {
+    .hero {
+      margin-bottom: 0;
+    }
+    .hero_model {
+      width: 100%;
+      top: 15%;
+      left: 5%;
+    }
+  }
+  @include respond(phone) {
+    .hero {
+      margin-bottom: 0;
+    }
+    .hero_model {
+      width: 100%;
+      top: 35%;
+      left: 15%;
+    }
+  }
+  
 }
 </style>
