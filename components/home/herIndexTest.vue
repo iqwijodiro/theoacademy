@@ -45,7 +45,7 @@
                           :alt="icon.title"
                           class="mb-2"
                         />
-                        <p class="text-sm font-weight-bold font-gray">
+                        <p class="text__sm font-weight-bold font-gray">
                           {{ icon.title }}
                         </p>
                       </div>

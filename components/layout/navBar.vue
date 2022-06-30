@@ -9,132 +9,179 @@
       class="pa-0"
     >
       <v-container class="d-flex justify-space-around align-center pa-5">
-        <v-app-bar-title class="mr-5">
-          <nuxt-link to="/">
-            <div class="font-weight-bold font-blue">Theo Academy</div>
-          </nuxt-link>
-        </v-app-bar-title>
-        <!-- <v-spacer></v-spacer> -->
-        <nav
-          v-if="$vuetify.breakpoint.mdAndUp"
-          class="nav transparent d-flex justify-space-around align-center mx-5"
-        >
-          <dropdown-overlay link-text="Formación" icon="mdi-chevron-down">
-            <template #content>
-              <v-container class="fill-height">
-                <v-row justify="start" align="center">
-                  <v-col cols="3" align-self="center">
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">Theo School</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/advancedAcademy">
-                      <h3 class="nav__link fw-700 mb-5">Advanced Aaademy</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">For Groups</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">Suscripciones</h3>
-                    </nuxt-link>
-                  </v-col>
-                  <v-col cols="4">
-                    <p class="nav__link font-light mb-5">Pack de Cursos</p>
-                    <p class="nav__link font-light mb-5">Diplomados Actuales</p>
-                    <p class="nav__link font-light mb-5">Escuela para Iglesias</p>
-                    <p class="nav__link font-light mb-5">Crece con TheoAcademy</p>
-                  </v-col>
-                  <v-col cols="4">
-                    <v-card width="100%" max-width="380" height="320">
-                      <v-img
-                        min-width="100%"
-                        min-height="100%"
-                        class="pa-5"
-                        :src="require('~/assets/images/img_course_prom.png')"
-                      >
-                        <div class="top__wrapper d-flex justify-end">
-                          <v-btn
-                            text
-                            right
-                            class="fw-600 font-light text-capitalize"
-                            to="/trainingCenter"
-                          >
-                            <p class="text__lg">
-                              Leer más
-                              <v-icon color="#fff">
-                                mdi-arrow-right
-                              </v-icon>
+        <div class="links__section d-flex justify-center align-center">
+          <v-app-bar-title class="mr-10">
+            <nuxt-link to="/">
+              <div class="font-weight-bold font-blue">Theo Academy</div>
+            </nuxt-link>
+          </v-app-bar-title>
+          <!-- <v-spacer></v-spacer> -->
+          <nav
+            v-if="$vuetify.breakpoint.mdAndUp"
+            class="nav d-inline-flex transparent mx-5"
+          >
+            <nuxt-link to="/" class="pa-0 align-self-center">
+              <h3 class="nav__link">Home</h3>
+            </nuxt-link>
+            <dropdown-overlay
+              link-text="Formación"
+              icon="mdi-chevron-down"
+              class="nav__link"
+            >
+              <template #content>
+                <v-container class="fill-height">
+                  <v-row justify="start" align="start">
+                    <v-col cols="3">
+                    <div class="links__wrapper">
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">Theo School</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/advancedAcademy">
+                        <h3 class="nav__link">Advanced Academy</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">For Groups</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">Suscripciones</h3>
+                      </nuxt-link>
+                    </div>
+                    </v-col>
+                    <v-col cols="4">
+                      <p class="text__lg font-light">Pack de Cursos</p>
+                      <p class="text__lg font-light">Diplomados Actuales</p>
+                      <p class="text__lg font-light">Escuela para Iglesias</p>
+                      <p class="text__lg font-light">Crece con TheoAcademy</p>
+                    </v-col>
+                    <v-col cols="4">
+                      <v-card width="100%" max-width="380" height="320">
+                        <v-img
+                          min-width="100%"
+                          min-height="100%"
+                          class="pa-5"
+                          gradient="0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 100%"
+                          :src="require('~/assets/images/img_course_prom.png')"
+                        >
+                          <div class="top__wrapper d-flex justify-end">
+                            <v-btn
+                              text
+                              right
+                              class="fw-600 font-light text-capitalize"
+                              to="/trainingCenter"
+                            >
+                              <p class="text__lg">
+                                Leer más
+                                <v-icon color="#fff"> mdi-arrow-right </v-icon>
+                              </p>
+                            </v-btn>
+                          </div>
+                          <div class="text__wrapper pa-5 font-light">
+                            <h2
+                              style="font-size: 40px"
+                              class="ma-0 font-light font-weight-light text-uppercase"
+                            >
+                              Orando
+                            </h2>
+                            <p
+                              class="text-capitalize fw-700 ma-0"
+                              style="font-size: 25px"
+                            >
+                              Bíblicamente
                             </p>
-                          </v-btn>
-                        </div>
-                        <div class="text__wrapper pa-5 font-light">
-                          <h2
-                            style="font-size: 40px"
-                            class="ma-0 font-light font-weight-light text-uppercase"
-                          >
-                            Orando
-                          </h2>
-                          <p
-                            class="text-capitalize fw-700 ma-0"
-                            style="font-size: 25px"
-                          >
-                            Bíblicamente
-                          </p>
-                        </div>
-                      </v-img>
-                    </v-card>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </template>
-          </dropdown-overlay>
-          <dropdown-overlay link-text="Más" icon="mdi-chevron-down">
-            <template #content>
-              <v-container class="fill-height">
-                <v-row justify="start" align="center">
-                  <v-col cols="3" align-self="center">
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">Theo School</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/advancedAcademy">
-                      <h3 class="nav__link fw-700 mb-5">Advanced Aaademy</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">For Groups</h3>
-                    </nuxt-link>
-                    <nuxt-link to="/courses">
-                      <h3 class="nav__link fw-700 mb-5">Suscripciones</h3>
-                    </nuxt-link>
-                  </v-col>
-                  <v-col cols="4">
-                    <p class="text__lg font-light mb-5">Theo School</p>
-                    <p class="text__lg font-light mb-5">Advanced ACademy</p>
-                    <p class="text__lg font-light mb-5">For Groups</p>
-                    <p class="text__lg font-light mb-5">Suscripciones</p>
-                  </v-col>
-                  <v-col cols="4">
-                    <v-card width="100%" max-width="380">
-                      <v-img
-                        min-width="100%"
-                        min-height="100%"
-                        :src="require('~/assets/images/img_course_prom.png')"
-                      >
-                      </v-img>
-                    </v-card>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </template>
-          </dropdown-overlay>
+                          </div>
+                          <div class="bottom__wrapper mt-10 mr-10 font-light" style="font-size: 14px">
+                            <span class="fw-700">
+                              Subscríbete y Disfruta de
+                            </span>
+                            <p>todo un pack de cursos acerca de este tema.</p>
+                          </div>
+                        </v-img>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </template>
+            </dropdown-overlay>
+            <dropdown-overlay link-text="Más" icon="mdi-chevron-down">
+              <template #content>
+                <v-container class="fill-height">
+                  <v-row justify="start" align="start">
+                    <v-col cols="3">
+                    <div class="links__wrapper">
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">Nosotros</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/advancedAcademy">
+                        <h3 class="nav__link">Blog</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">Recursos</h3>
+                      </nuxt-link>
+                      <nuxt-link to="/courses">
+                        <h3 class="nav__link">Contactos</h3>
+                      </nuxt-link>
+                    </div>
+                    </v-col>
+                    <v-col cols="4">
+                      <p class="text__lg font-light">Un mundo caído como actuar</p>
+                      <p class="text__lg font-light">Regala un giftbook</p>
+                      <p class="text__lg font-light">Becas</p>
+                    </v-col>
+                    <v-col cols="4">
+                      <v-card width="100%" max-width="380" height="320">
+                        <v-img
+                          min-width="100%"
+                          min-height="100%"
+                          class="pa-5"
+                          gradient="0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 100%"
+                          :src="require('~/assets/images/pict_blog.png')"
+                        >
+                          <div class="top__wrapper d-flex justify-end">
+                            <v-btn
+                              text
+                              right
+                              class="fw-600 font-light text-capitalize"
+                              to="/trainingCenter"
+                            >
+                              <p class="text__lg">
+                                Leer más
+                                <v-icon color="#fff"> mdi-arrow-right </v-icon>
+                              </p>
+                            </v-btn>
+                          </div>
+                          <div class="text__wrapper pa-5 font-light">
+                            <h2
+                              style="font-size: 40px"
+                              class="ma-0 font-light font-weight-light"
+                            >
+                              Un mundo caído,
+                            </h2>
+                            <p
+                              class="text-capitalize fw-700 ma-0"
+                              style="font-size: 25px"
+                            >
+                              ¿cómo actuar?
+                            </p>
+                          </div>
+                          <div class="bottom__wrapper mt-10 mr-10 font-light" style="font-size: 14px">
+                            <span class="fw-700">
+                              Difruta de 
+                            </span>
+                            <p>nuestros temas en Blog.</p>
+                          </div>
+                        </v-img>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </template>
+            </dropdown-overlay>
+          </nav>
+        </div>
+        <div class="login__section">
           <div v-if="!logged" class="d-flex align-center">
-            <v-btn x-small rounded class="white--text bg-green py-6 px-5 mr-3">
-              Crear <br />
-              Cuenta
-              <v-icon>mdi-circle-edit-outline</v-icon>
-            </v-btn>
-            <v-btn x-small rounded class="white--text bg-green py-6 px-5">
-              Ingresar
-              <v-icon>mdi-login-variant</v-icon>
-            </v-btn>
+            <v-btn class="btn bg-secondary mr-3"> Regístrate </v-btn>
+            <v-btn class="btn bg-primary"> Iniciar Sesión </v-btn>
           </div>
           <div v-else class="d-flex justify-center align-center">
             <v-btn icon>
@@ -177,7 +224,7 @@
               </v-card>
             </v-menu>
           </div>
-        </nav>
+        </div>
         <!-- Mobile version Menu -->
         <v-btn
           v-if="$vuetify.breakpoint.smAndDown"
@@ -189,8 +236,8 @@
           <v-icon>mdi-menu</v-icon>
         </v-btn>
         <!-- Mobile version Menu -->
-        <v-switch v-model="logged"></v-switch>
       </v-container>
+      <v-switch v-model="logged"></v-switch>
     </v-app-bar>
     <!-- Mobile version Navigation Drawer -->
     <v-navigation-drawer
@@ -321,16 +368,17 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  .nav__link,
-  .nav__link.nav__link-drop {
-    h3 {
-      color: #fff !important;
-      cursor: pointer;
-    }
+  .nav__link {
+     font-weight: 700 !important;
+     margin-right: 20px;
   }
   .nav__link.nav__link-drop {
     padding: 1rem;
     border-bottom: 1px solid #fff;
   }
 }
+  .links__wrapper .nav__link{
+     font-weight: 700 !important;
+     margin-bottom: 16px;
+  }
 </style>

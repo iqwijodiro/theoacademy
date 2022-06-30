@@ -17,15 +17,15 @@ h1,
   font-size: 58px;
 }
 
-h2.section__title {
+h2,
+.section__title {
   font-size: 3rem;
 }
 
 h3,
-.nav__link {
+h3.nav__link {
   font-size: 1.3rem;
   color: #fff;
-  font-weight: 500;
 }
 
 // other style´s elements
@@ -63,8 +63,12 @@ ul,
 }
 
 // Fonts & text styles
+.text__xl {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
 .text__lg {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 .text__mid {
@@ -73,8 +77,8 @@ ul,
   word-break: break-word;
   word-wrap: break-word;
 }
-.text-sm {
-  font-size: .8rem;
+.text__sm {
+  font-size: 0.8rem;
   line-height: 1.5;
   word-break: break-word;
   word-wrap: break-word;
@@ -82,10 +86,10 @@ ul,
 
 .text__special {
   font-size: 2rem;
-  font-family: $special-font;
+  // font-family: $special-font;
 }
 .font-dark {
-  color: #383838;
+  color: #858383;
 }
 .font-light {
   color: #fff;
@@ -97,7 +101,10 @@ ul,
   color: $blue-sec-light;
 }
 .font-gray {
-  color: #87898A;
+  color: #87898a;
+}
+.font-yellow {
+  color: $yellow-cta;
 }
 .fw-700 {
   font-weight: 700;
@@ -105,7 +112,6 @@ ul,
 .fw-600 {
   font-weight: 600;
 }
-
 
 // Backgrounds
 .bg-light {
@@ -135,6 +141,36 @@ ul,
 .card__text {
   font-size: 1.1rem;
   font-weight: 400;
+}
+
+// Buttons
+
+.btn {
+  height: 45px !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  line-height: 32px !important;
+  padding: 0.5rem 1.5rem !important;
+  font-size: 21px !important;
+  border-radius: 60px !important;
+  letter-spacing: inherit;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .6rem .8rem rgba(#000, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+
+.bg-primary {
+  background-color: $yellow-cta !important;
+}
+.bg-secondary {
+  background-color: transparent !important;
+  border: 1.5px solid #fff !important;
 }
 
 // Animations

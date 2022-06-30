@@ -13,9 +13,9 @@
     transition="slide-y-transition"
   >
     <template #activator="{ on, attrs }">
-      <v-btn v-bind="attrs" text class="text-capitalize" v-on="on">
+      <v-btn v-bind="attrs" text class="text-capitalize pa-0 ma-0" v-on="on">
         <slot name="text" />
-        <h3 class="nav__link fw-700">
+        <h3 class="nav__link fw-700 mr-5">
           {{ linkText }}
           <v-icon color="#fff"> {{ icon }} </v-icon>
         </h3>
