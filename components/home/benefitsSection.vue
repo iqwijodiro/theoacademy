@@ -3,7 +3,7 @@
     <v-container>
     <v-row align="center" justify="center">
         <v-col cols="12" md="4" class="px-4 mx-auto my-0">
-            <div class="text__wrapper text-center">
+            <div v-animate-on-scroll class="text__wrapper text-center">
                 <v-icon color="#FCBB34" size="60" class="mb-6">
                     mdi-cast-education
                 </v-icon>
@@ -14,7 +14,7 @@
             </div>
         </v-col>
         <v-col cols="12" md="4" class="px-4 mx-auto my-0">
-            <div class="text__wrapper text-center">
+            <div v-animate-on-scroll class="text__wrapper text-center">
                 <v-icon color="#FCBB34" size="60" class="mb-6">
                     mdi-map-marker
                 </v-icon>
@@ -25,7 +25,7 @@
             </div>
         </v-col>
         <v-col cols="12" md="4" class="px-4 mx-auto my-0">
-            <div class="text__wrapper text-center">
+            <div v-animate-on-scroll class="text__wrapper text-center">
                 <v-icon color="#FCBB34" size="60" class="mb-6">
                     mdi-cellphone-play
                 </v-icon>

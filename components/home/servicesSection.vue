@@ -1,13 +1,11 @@
 <template>
   <section>
     <v-container>
-      <v-row justify="center">
+      <v-row justify="center" class="fill-height">
         <v-col cols="12" md="10">
           <v-card
             elevation="0"
-            class="rounded-xl overflow-hidden"
-            max-height="850"
-            height="auto"
+            class="rounded-xl"
           >
             <v-row no-gutters>
               <v-col cols="12" md="6" class="pa-0">

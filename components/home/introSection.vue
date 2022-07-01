@@ -10,7 +10,7 @@
           max-width="740"
           class="card__model-new d-flex flex-column flex-sm-row"
         > -->
-          <v-col cols="12" md="5">
+          <v-col cols="12" md="5" class="ma-0 pa-3">
             <!-- <div class="figure__wrapper"> -->
             <!-- <div class="figure__shaped figure_1" />
               <div class="figure__shaped figure_2" />
@@ -18,7 +18,8 @@
               <div class="figure__shaped figure_4" />
               <div class="figure__central figure_5" /> -->
             <v-img
-              :src="require('~/assets/images/square_shaped.svg')"
+              v-animate-on-scroll
+              src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1656627219/theoacademy-assets/square_shaped_twious.svg"
               contain
               max-width="480px"
               max-height="500px"
@@ -26,7 +27,7 @@
             <!-- </div> -->
           </v-col>
           <v-col cols="12" md="6">
-            <div class="text__wrapper text-center text-md-left px-5 py-8">
+            <div v-animate-on-scroll class="text__wrapper text-center text-md-left px-5 py-8">
               <h3 class="title__xl font-blue fw-600 mb-8">
                 Porqué estudiar con Theo Academy
               </h3>

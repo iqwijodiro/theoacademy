@@ -6,16 +6,15 @@
     tile
     offset-y
     close-delay="100"
-    nudge-bottom="20"
+    nudge-bottom="25"
     class="pa-0 mx-auto"
     max-width="1500"
     min-width="1200"
     transition="slide-y-transition"
   >
     <template #activator="{ on, attrs }">
-      <v-btn v-bind="attrs" text class="text-capitalize pa-0 ma-0" v-on="on">
-        <slot name="text" />
-        <h3 class="nav__link fw-700 mr-5">
+      <v-btn v-bind="attrs" text class="text-capitalize pa-2 mx-2" v-on="on">
+        <h3 class="nav__link fw-700">
           {{ linkText }}
           <v-icon color="#fff"> {{ icon }} </v-icon>
         </h3>

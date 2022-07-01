@@ -54,9 +54,7 @@
                   </v-col>
                   <div v-if="$vuetify.breakpoint.smAndDown" >
                     <v-col
-                      v-for="icon in icons"
-                          :key="icon.title"
-                      class="my-3 my-sm-1 mx-2"
+                      class="my-3 my-sm-1 mx-0 pa-0"
                     >
                       <appear-frame
                         :delay="100"
@@ -64,7 +62,7 @@
                         :translate="['100%', '0']"
                       >
                         <v-card
-                          
+                          class="ma-0"
                           flat
                           color="transparent"
                         >
@@ -96,6 +94,7 @@
               <v-img
                 src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1655565735/theoacademy-assets/hero_img_model_qelum4.png"
                 class="hero_model ma-0"
+                eager
                 alt="Usuario de Theo Academy"
               />
               <!-- <div
@@ -125,15 +124,15 @@ export default {
       icons: [
         {
           title: 'School',
-          vector: require('~/assets/images/Vector1.svg'),
+          vector: 'https://res.cloudinary.com/db0gjdwr0/image/upload/v1656631879/theoacademy-assets/Vector1_mmjtij.svg',
         },
         {
           title: 'Advanced',
-          vector: require('~/assets/images/Vector2.svg'),
+          vector: 'https://res.cloudinary.com/db0gjdwr0/image/upload/v1656631879/theoacademy-assets/Vector2_jppyv4.svg',
         },
         {
           title: 'For Group',
-          vector: require('~/assets/images/Vector3.svg'),
+          vector: 'https://res.cloudinary.com/db0gjdwr0/image/upload/v1656631879/theoacademy-assets/Vector3_zwcg2p.svg',
         },
       ],
     }

@@ -26,7 +26,7 @@
             <dropdown-overlay
               link-text="Formación"
               icon="mdi-chevron-down"
-              class="nav__link"
+              class="nav__link mr-5"
             >
               <template #content>
                 <v-container class="fill-height">
@@ -60,16 +60,17 @@
                           min-height="100%"
                           class="pa-5"
                           gradient="0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 100%"
-                          :src="require('~/assets/images/img_course_prom.png')"
+                          src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1656627342/theoacademy-assets/img_course_prom_gtuirv.webp"
                         >
                           <div class="top__wrapper d-flex justify-end">
                             <v-btn
                               text
                               right
+                              small
                               class="fw-600 font-light text-capitalize"
                               to="/trainingCenter"
                             >
-                              <p class="text__lg">
+                              <p class="text__mid ma-1">
                                 Leer más
                                 <v-icon color="#fff"> mdi-arrow-right </v-icon>
                               </p>
@@ -134,16 +135,17 @@
                           min-height="100%"
                           class="pa-5"
                           gradient="0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0) 100%"
-                          :src="require('~/assets/images/pict_blog.png')"
+                          src="https://res.cloudinary.com/db0gjdwr0/image/upload/v1656627342/theoacademy-assets/pict_blog_g5htq2.webp"
                         >
                           <div class="top__wrapper d-flex justify-end">
                             <v-btn
                               text
                               right
+                              small
                               class="fw-600 font-light text-capitalize"
                               to="/trainingCenter"
                             >
-                              <p class="text__lg">
+                              <p class="text__mid ma-1">
                                 Leer más
                                 <v-icon color="#fff"> mdi-arrow-right </v-icon>
                               </p>
@@ -178,7 +180,7 @@
             </dropdown-overlay>
           </nav>
         </div>
-        <div class="login__section">
+        <div v-if="$vuetify.breakpoint.mdAndUp" class="login__section">
           <div v-if="!logged" class="d-flex align-center">
             <v-btn class="btn bg-secondary mr-3"> Regístrate </v-btn>
             <v-btn class="btn bg-primary"> Iniciar Sesión </v-btn>
