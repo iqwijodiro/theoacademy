@@ -32,7 +32,7 @@
                 Porqué estudiar con Theo Academy
               </h3>
               <p class="text__xl font-dark">
-                Porque somos una opcion que te permite conocer la palabra de Dios como fundamento para tu vida, como lo hacemos?
+                Porque somos una opción que te permite conocer la palabra de Dios como fundamento para tu vida, como lo hacemos?
               </p>
             </div>
           </v-col>
